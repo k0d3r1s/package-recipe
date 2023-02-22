@@ -1,0 +1,28 @@
+{
+    "name": "k0d3r1s/package-recipe",
+    "type": "composer-plugin",
+    "require": {
+        "php": ">=8.2.0",
+        "ext-json": "*",
+        "composer-plugin-api": "*"
+    },
+    "require-dev": {
+        "composer/composer": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Koderis\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "class": "Koderis\\PackageRecipe",
+        "branch-alias": {
+            "dev-master": "0.x-dev"
+        }
+    }
+}
