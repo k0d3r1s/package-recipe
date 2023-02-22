@@ -6,9 +6,14 @@ use Composer\Composer;
 use Composer\IO\IOInterface;
 use Composer\Plugin\PluginInterface;
 
-final readonly class PackageRecipe implements PluginInterface
+final class PackageRecipe implements PluginInterface
 {
-    public function activate(private Composer $composer, private IOInterface $io): void
+    private Composer $composer;
+    private IOInterface $io;
+
+    public function activate(Composer $composer, IOInterface $io): void
     {
+        $this->composer = $composer;
+        $this->io = $io;
     }
 }
